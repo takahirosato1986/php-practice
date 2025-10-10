@@ -80,10 +80,10 @@ if($kanto_key[3] == "埼玉県") {
 $kanto["北海道"] = "札幌市";
 $kanto["沖縄県"] = "那覇市";
 
-$kanto_key = array_keys($kanto);
-
-for ($i = 0; $i <= 8; $i++) {
-    echo ($i < 7) ? $kanto_key[$i]. "の県庁所在地は、". $kanto[$kanto_key[$i]]. "です。\n" : $kanto_key[$i]. "は関東地方ではありません。\n";
+$index = 0;
+foreach ($kanto as $x => $y) {
+    echo ($index < 7) ? $x. "の県庁所在地は、". $y. "です。\n" : $x. "は関東地方ではありません。\n";
+    $index++;
 }
 
 // Q10 関数-1
@@ -119,7 +119,7 @@ function distinguishNum($oneGrade) {
     
     switch ($oneGrade) {
     case "A":
-    case "B":   
+    case "B":
         echo "合格です。\n";
         break;
 
