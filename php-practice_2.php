@@ -99,10 +99,10 @@ echo $oneMonthAgo->modify('-1 months')->format("Y-m-d");
 
 /* 問題2 */
 
-$startday = strtotime("1992-04-25");
-$countday = strtotime("2025-10-09");
-$progress = ($countday - $startday) / 86400;
-echo "あの日から". $progress . "日経過しました。";
+$startday = new DateTime("1992-4-25");
+$countday = new DateTime("today");
+$progress = $startday->diff($countday);
+echo "あの日から". $progress->format("%a"). "日経過しました。";
 
 
 

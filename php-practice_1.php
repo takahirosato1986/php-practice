@@ -82,7 +82,12 @@ $kanto["沖縄県"] = "那覇市";
 
 $index = 0;
 foreach ($kanto as $x => $y) {
-    echo ($index < 7) ? $x. "の県庁所在地は、". $y. "です。\n" : $x. "は関東地方ではありません。\n";
+    if($index < 7){
+        $capital = $x. "の県庁所在地は、". $y. "です。\n";
+        } else {
+        $capital = $x. "は関東地方ではありません。\n";
+        }
+        echo $capital;
     $index++;
 }
 
