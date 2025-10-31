@@ -87,6 +87,7 @@ $sato = new Student(235,"佐藤");
 echo "学籍番号". $sato->studentId. "番の生徒は". $sato->studentName. "です。";
 
 // Q4 オブジェクト-2
+
 $yamada = new Student(120, '山田');
 $yamada->attend('PHP');
 
@@ -104,6 +105,43 @@ $countday = new DateTime("today");
 $progress = $startday->diff($countday);
 echo "あの日から". $progress->format("%a"). "日経過しました。";
 
+/* 追加課題1 */
 
+class pokemon {
+    public $name;
+    public $element;
+    
+    public function __construct($x,$y){
+        $this->name = $x;
+        $this->element = $y;
+    }
+    
+    public function attack($skill){
+        echo ""いけ、"". $this->element. ""ポケモン"". $this->name. ""！！"". $skill. ""だ！！"";
+    }
+    
+}
+
+$pikachu = new pokemon(""ピカチュウ"",""ネズミ"");
+$pikachu->attack(""10万ボルト"");
+
+/* 追加課題2 */
+
+class Employee {
+    public $employeeId;
+    public $employeeName;
+    
+    public function __construct($x,$y){
+        $this->employeeId = $x;
+        $this->employeeName = $y;
+    }
+    
+    public function checkIn(){
+        echo $this->employeeName. ""が出勤しました。社員ID："". $this->employeeId;
+    }   
+}
+
+$employee = new Employee(1,""山田太郎"");
+$employee->checkIn();
 
 ?>
