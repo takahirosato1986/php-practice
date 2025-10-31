@@ -117,13 +117,13 @@ class pokemon {
     }
     
     public function attack($skill){
-        echo ""いけ、"". $this->element. ""ポケモン"". $this->name. ""！！"". $skill. ""だ！！"";
+        echo "いけ、". $this->element. "ポケモン". $this->name. "！！". $skill. "だ！！";
     }
     
 }
 
-$pikachu = new pokemon(""ピカチュウ"",""ネズミ"");
-$pikachu->attack(""10万ボルト"");
+$pikachu = new pokemon("ピカチュウ","ネズミ");
+$pikachu->attack("10万ボルト");
 
 /* 追加課題2 */
 
@@ -137,11 +137,11 @@ class Employee {
     }
     
     public function checkIn(){
-        echo $this->employeeName. ""が出勤しました。社員ID："". $this->employeeId;
+        echo $this->employeeName. "が出勤しました。社員ID：". $this->employeeId;
     }   
 }
 
-$employee = new Employee(1,""山田太郎"");
+$employee = new Employee(1,"山田太郎");
 $employee->checkIn();
 
 ?>
