@@ -111,9 +111,9 @@ class pokemon {
     public $name;
     public $element;
     
-    public function __construct($x,$y){
-        $this->name = $x;
-        $this->element = $y;
+    public function __construct($pokemon_name,$pokemon_type){
+        $this->name = $pokemon_name;
+        $this->element = $pokemon_type;
     }
     
     public function attack($skill){
@@ -131,9 +131,9 @@ class Employee {
     public $employeeId;
     public $employeeName;
     
-    public function __construct($x,$y){
-        $this->employeeId = $x;
-        $this->employeeName = $y;
+    public function __construct($id,$name){
+        $this->employeeId = $id;
+        $this->employeeName = $name;
     }
     
     public function checkIn(){
